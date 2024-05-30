@@ -145,16 +145,21 @@ w : 필드의 너비에 맞게 잘려진 내용을 너비보다 상세하게 출
 >>현재 환경의 작업 상태를 아래와 같이 확인할 수 있다.
 ![jobs1](https://dbscthumb-phinf.pstatic.net/4938_000_1/20170710154910976_RX87MMBQ3.jpg/ka38_149_i2.jpg?type=w575_fst_n&wm=Y)
 
-
->>-l 옵션은 state 필드 앞에 프로세스 ID를 출력한다.
+>>-l 옵션은 state 필드 앞에 프로세스 ID를 출력한다.\
 ![jobs2](https://dbscthumb-phinf.pstatic.net/4938_000_1/20170710154937795_26VDE1O3H.jpg/ka38_149_i3.jpg?type=w575_fst_n&wm=Y)
 
 >>jobs 명령어로 확인할 수 있는 세션의 상태값은 다음과 같다.
+
+|상태|설명|
+|-|-|
 |Running|작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.|
 |Done|작업이 완료되어 0을 반환하고 종료했음을 뜻한다.|
 |Done (code)|작업이 정상적으로 완료했으며, 0이 아닌 코드를 반환했음을 뜻한다.|
 |Stopped|작업이 일시 중단됨을 뜻한다.|
-|Stopped (SIGTSTP)||
+|Stopped (SIGTSTP)|SIGTSTP 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped (SIGSTOP)|SIGSTOP 신호가 일시 중단했음을 뜻한다.|
+|Stopped (SIGTTIN)|SIGTTIN 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped (SIGTTOU)|SIGTTOU 신호가 작업을 일시 중단했음을 뜻한다.|
 
 >>다음과 같이 하면 v로 시작하는 모든 프로세스 ID를 확인할 수 있다.
 ![jobs3](https://dbscthumb-phinf.pstatic.net/4938_000_1/20170710155004268_W9X1UY7YP.jpg/ka38_149_i4.jpg?type=w575_fst_n&wm=Y)
